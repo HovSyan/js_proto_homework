@@ -1,0 +1,11 @@
+/* Simple class task */
+
+Create a function/class Person to be able to call it with 'new Person(..)'.
+The person has name: string, surname: string, and has a method called getFullName, which returns
+the person name + ' ' + surname.
+
+EXAMPLE.
+var p = new Person('John', 'Snow');
+console.log(p.name)     // John
+console.log(p.surname)  // Snow
+console.log(p.getFullName())    // John Snow
