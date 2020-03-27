@@ -1,0 +1,25 @@
+/* Moving functionality to prototype */
+
+NOTE: If you haven't solved task2 yet, get back to it. Task3 is connected with task2
+
+Create a function/class Calculator. The function can have a parameter initialValue: number.
+If it is not provided, than initialValue must be set to 0.
+The class must have functions:
+  - getValue(), which will return the result of all operations,
+  - add(number), which will add a number to previous result,
+  - multiply(number), which will multiply the previous result by number,
+  - reset(), which will drop all previous calculations, and set result to 0.
+Move all this functions from function body, to function prototype object
+
+EXAMPLE.
+var c = new Calculator();
+c.add(5);
+c.multiply(10);
+c.getValue();       // 50
+c.reset();
+c.getValue();       // 0
+c.__proto__ === Calculator.prototype    // true
+Calculator.prototype.hasOwnProperty('add')  // true
+Calculator.prototype.hasOwnProperty('reset')  // true
+Calculator.prototype.hasOwnProperty('getValue')  // true
+Calculator.prototype.hasOwnProperty('multiply')  // true
