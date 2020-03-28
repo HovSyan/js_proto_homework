@@ -3,4 +3,6 @@
 Write your own function myInstanceOf(value: any, class: any),
 which will behave exactly like instanceOf operator.
 
+DO NOT USE instanceOf operator.
+
 More on instanceOf here: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/instanceof
