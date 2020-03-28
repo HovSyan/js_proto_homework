@@ -1,0 +1,25 @@
+/* Overriding "parent" methods */
+
+Write a function/Class rectangle, which has a method area.
+Design yourself how rectangle sides must be set. It can be via function
+parameters:
+
+let r = new Rectangle(5, 6);
+
+Or via later assignment:
+
+let r = new Rectangle();
+r.a = 5;
+r.b = 6;
+
+Write a function/Class square, which will extend the function/class rectangle,
+and will also have the area function, but with its own definition.
+
+EXAMPLE.
+let r = new Rectangle(5, 6);
+r.area()    // Will call Rectangle.prototype.area function
+
+let s = new Square(5);
+s.area()    // Will call Square.prototype.area function
+
+s.__proto__.__proto__ === Rectangle.prototype   // true
