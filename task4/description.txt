@@ -9,6 +9,6 @@ var arr = new MyArray(undefined, false, 12);
 console.log(arr);   // { 0: undefined, 1: false, 2: 12, length: 3 }
 arr.push('hi');
 console.log(arr); // { 0: undefined, 1: false, 2: 12, 3: 'hi', length: 4 }
-console.log(arr.map(v => +v)); {0: NaN, 1: 0, 2: 12, 3: NaN, length: 4}
+console.log(arr.map(v => +v)); // {0: NaN, 1: 0, 2: 12, 3: NaN, length: 4}
 a instanceOf MyArray    // true
 a instanceOf Array      // true -> Explain Why

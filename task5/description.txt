@@ -1,0 +1,22 @@
+/* Really extending array class */
+
+NOTE: If you haven't solved task4 yet, get back to it. Task5 is connected with task4
+
+Write your own array function/class MyArray. The function allow any number of arguments in it,
+and will create a simple js array from them. Your MyArray class must have all the functions defined in
+js Array, also it must have its own functions in its prototype. Define a function sum which return the sum
+of all numbers in the array, and a function empty, which empties the array.
+
+EXAMPLE.
+var arr = new MyArray(undefined, false, 12, 24);
+console.log(arr);   // { 0: undefined, 1: false, 2: 12, 3: 24, length: 4 }
+arr.push('hi');
+console.log(arr); // { 0: undefined, 1: false, 2: 12, 3: 24, 4: 'hi', length: 5 }
+console.log(arr.map(v => +v)); // {0: NaN, 1: 0, 2: 12, 3: NaN, length: 4}
+console.log(arr.sum())  // 36
+arr.empty();
+console.log(arr)    // { length: 0 }
+a instanceOf MyArray    // true
+a instanceOf Array      // true
+a.__proto__ === MyArray.prototype   // true
+a.__proto__.__proto__ === Array.prototype   // true
