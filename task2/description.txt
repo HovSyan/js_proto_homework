@@ -1,28 +1,23 @@
-/* Class with state in it */
+/* Some utility functions with prototype */
 
-Create a function/class Calculator. The function can have a parameter initialValue: number.
-If it is not provided, than initialValue must be set to 0.
-The class must have functions:
-  - getValue(), which will return the result of all operations,
-  - add(number), which will add a number to previous result,
-  - multiply(number), which will multiply the previous result by number,
-  - reset(), which will drop all previous calculations, and set result to 0.
+Implement this functions.
+1. A function that get an object as a parameter and returns an array of
+strings representing its prototype chain classes.
 
-Look at the examples for better understanding.
+Example.
+let d = new Date();
+getProtoChain(d)    // ["Date", "Object"]
 
-EXAMPLE 1.
-var c = new Calculator();
-c.add(5);
-c.multiply(10);
-c.getValue();       // 50
-c.reset();
-c.getValue();       // 0
+2. Write a function that get two objects obj1 and obj2, and sets the obj1's
+prototype obj2 and obj2's prototype obj1. So all properties will be available in obj1
+and obj2.
 
-EXAMPLE 2.
-var c = new Calculator(4);
-c.add(-5);
-c.multiply(-90);
-c.getValue();       // 90;
-c.reset();
-c.addValue(8);
-c.getValue();       // 8;
+Example.
+setProtosToEachOther(o1, o2)
+
+3. Suppose you have classes/functions A and B, so that A extends B. You need to write a function
+that gets third class/function C and puts that in this way.
+A extends C, C extends B.
+
+Example.
+innerExtend(A, B, C);
