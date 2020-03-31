@@ -1,0 +1,12 @@
+/* The last */
+
+Read this article. It is very useful:
+https://medium.com/@js_tut/a-guide-to-prototype-based-class-inheritance-in-javascript-849d3c3ddca
+
+REMEMBER 1: Javascript is on of the strongest object oriented programming languages that implements
+OOP without classes. Where else you can create an object simply adding { and } (aka let obj = {}).
+In other OOP languages like C++ and Java, for an object creation you must implement a class or struct.
+
+REMEMBER 2: In front-end javascript sometimes it is more useful to forget about classes and construct your
+code on simple functions. In that case your code will be more maintainable, debbugable and readable. For the least, remember,
+that even the classes are functions in js!
