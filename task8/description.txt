@@ -1,0 +1,44 @@
+/* Some utility function */
+
+1. Write a function that gets an object as an argument and returns
+its classes in string array.
+
+EXAMPLE:
+const d = new Date("2020-04-01");
+
+getProtos(d)    // ["Date", "Object"];
+
+2. Suppose you have two classes A extends B. You are required to write a function
+that gets a third class C and places it in the middle of proto chain. Like this
+A extends C, C extends B.
+
+function inTheMiddleOfProtoChain(A, B, C) {...}
+
+3. Write a function that gets two object as an argument o1 and o2 and sets the prototype of each
+to others prototype. So o1 will receive all properties of o1 and o2 will receive all props of
+o1. It is a simple function, but I want you to understand that to set a proto you dont need a class
+at all.
+
+EXAMPLE:
+let o1 = {name: 'Regnar'};
+let o2 = {surname: 'Lodbrock'};
+
+setPrototypeOfEachOther(o1, o2);
+
+o2.name // Ragnar
+o1.surname  // Lodbrock
+
+4*. Write a function that gets two arguments: 1) an object 2) an array of string - function/class names.
+You must set chain of protos of an object to array function/class prototypes.
+
+EXAMPLE:
+let o = {};
+setPrototypes(o, ["Date", "Object"]);
+
+o.__proto__ == Date.prototype   // true
+o.__proto__.__proto__ == Object.prototype   // true
+
+Preconditions: an array of classes will be valid proto chain
+
+HINT: you must use eval(..) function.
+More on eval: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/eval
